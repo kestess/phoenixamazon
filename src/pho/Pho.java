@@ -30,7 +30,7 @@ public class Pho {
         directFriends.stream()
                       .map(u -> getDirectFriendsForUser(u))
                       .flatMap(l -> l.stream())
-                      .distinct()
+                      // .distinct()
                       .filter(u -> !u.equals(user))
                       .forEach(networkedFriends::add);
         
